@@ -1,6 +1,8 @@
 # phergie/phergie-irc-connection
 
-A PHP data structure for client connection information per the IRC protocol as described in RFC 1459. Primarily used by IRC client implementations of the Phergie project.
+A PHP data structure for containing client connection information per the IRC protocol as described in RFC 1459.
+
+Primarily used by IRC client implementations of the Phergie project.
 
 [![Build Status](https://secure.travis-ci.org/phergie/phergie-irc-connection.png?branch=master)](http://travis-ci.org/phergie/phergie-irc-connection)
 
