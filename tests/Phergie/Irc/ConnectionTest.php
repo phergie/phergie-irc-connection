@@ -34,6 +34,40 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Tests setServerHostname().
+     */
+    public function testSetServerHostname()
+    {
+        $this->connection->setServerHostname('hostname');
+        $this->assertSame('hostname', $this->connection->getServerHostname());
+    }
+
+    /**
+     * Tests getServerHostname().
+     */
+    public function testGetServerHostname()
+    {
+        $this->assertNull($this->connection->getServerHostname());
+    }
+
+    /**
+     * Tests setServerPort().
+     */
+    public function testSetServerPort()
+    {
+        $this->connection->setServerPort(6668);
+        $this->assertSame(6668, $this->connection->getServerPort());
+    }
+
+    /**
+     * Tests getServerPort().
+     */
+    public function testGetServerPort()
+    {
+        $this->assertSame(6667, $this->connection->getServerPort());
+    }
+
+    /**
      * Tests setPassword().
      */
     public function testSetPassword()

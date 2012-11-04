@@ -19,6 +19,20 @@ namespace Phergie\Irc;
 class Connection implements ConnectionInterface
 {
     /**
+     * Server hostname
+     *
+     * @var string
+     */
+    protected $serverHostname;
+
+    /**
+     * Server port
+     *
+     * @var int
+     */
+    protected $serverPort = 6667;
+
+    /**
      * Connection password
      *
      * @var string
@@ -66,6 +80,50 @@ class Connection implements ConnectionInterface
      * @var array
      */
     protected $options = array();
+
+    /**
+     * Implements ConnectionInterface::setServerHostname().
+     *
+     * @param string $hostname
+     * @see \Phergie\Irc\ConnectionInterface::setServerHostname()
+     */
+    public function setServerHostname($hostname)
+    {
+        $this->serverHostname = $hostname;
+    }
+
+    /**
+     * Implements ConnectionInterface::getServerHostname().
+     *
+     * @return string
+     * @see \Phergie\Irc\ConnectionInterface::getServerHostname()
+     */
+    public function getServerHostname()
+    {
+        return $this->serverHostname;
+    }
+
+    /**
+     * Implements ConnectionInterface::setServerPort().
+     *
+     * @param int $port
+     * @see \Phergie\Irc\ConnectionInterface::setServerPort()
+     */
+    public function setServerPort($port)
+    {
+        $this->serverPort = $port;
+    }
+
+    /**
+     * Implements ConnectionInterface::getServerPort().
+     *
+     * @return int
+     * @see \Phergie\Irc\ConnectionInterface::getServerPort()
+     */
+    public function getServerPort()
+    {
+        return $this->serverPort;
+    }
 
     /**
      * Implements ConnectionInterface::setPassword().

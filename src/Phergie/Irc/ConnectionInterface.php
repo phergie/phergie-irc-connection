@@ -21,6 +21,37 @@ namespace Phergie\Irc;
 interface ConnectionInterface
 {
     /**
+     * Sets the hostname of the server.
+     *
+     * @param string $hostname
+     */
+    public function setServerHostname($hostname);
+
+    /**
+     * Returns the hostname of the server.
+     *
+     * @return string
+     */
+    public function getServerHostname();
+
+    /**
+     * Sets the port on which the server is running.
+     *
+     * @param int $port
+     */
+    public function setServerPort($port);
+
+    /**
+     * Returns the port on which the server is running.
+     *
+     * The recommended return value for this method if no port is explicitly set is 6667.
+     *
+     * @return int
+     * @link http://www.irc-wiki.org/Internet_Relay_Chat#Protocol
+     */
+    public function getServerPort();
+
+    /**
      * Sets the connection password.
      *
      * @param string $password
