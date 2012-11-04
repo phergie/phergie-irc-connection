@@ -1,0 +1,21 @@
+{
+    "minimum-stability": "dev",
+    "name": "phergie/phergie-irc-connection",
+    "description": "Data structure for containing information about an IRC client connection",
+    "keywords": [ "irc", "client", "server", "connection" ],
+    "license": "BSD-2-Clause",
+    "support": {
+        "email": "team@phergie.org",
+        "irc": "irc://irc.freenode.net/phergie",
+        "issues": "https://github.com/phergie/phergie-irc-connection/issues",
+        "source": "https://github.com/phergie/phergie-irc-connection"
+    },
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Phergie": "src"
+        }
+    }
+}
