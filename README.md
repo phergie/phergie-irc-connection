@@ -29,6 +29,8 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```php
 $connection = new \Phergie\Irc\Connection();
 
+$connection->setServerHostname('hostname');
+$connection->setServerPort(6668);
 $connection->setPassword('password');
 $connection->setNickname('nickname');
 $connection->setUsername('username');
@@ -37,6 +39,8 @@ $connection->setServername('servername');
 $connection->setRealname('realname');
 $connection->setOption('option', 'value');
 
+echo $connection->getServerHostname();
+echo $connection->getServerPort();
 echo $connection->getPassword();
 echo $connection->getNickname();
 echo $connection->getUsername();
