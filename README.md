@@ -14,7 +14,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 {
     "minimum-stability": "dev",
     "require": {
-        "phergie/phergie-irc-connection": "dev-master"
+        "phergie/phergie-irc-connection": "1.1.0"
     }
 }
 ```
