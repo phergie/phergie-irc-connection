@@ -54,18 +54,18 @@ class Connection implements ConnectionInterface
     protected $username;
 
     /**
-     * User's hostname
+     * User's hostname under RFC 1459 or the mode under RFC 2812
      *
      * @var string
      */
-    protected $hostname;
+    protected $hostname = '0';
 
     /**
-     * User's server name
+     * User's server name under RFC 1459 or an unused parameter under RFC 2812
      *
      * @var string
      */
-    protected $servername;
+    protected $servername = '*';
 
     /**
      * User's real name

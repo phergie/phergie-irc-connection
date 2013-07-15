@@ -132,7 +132,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetHostname()
     {
-        $this->assertNull($this->connection->getHostname());
+        $this->assertSame('0', $this->connection->getHostname());
     }
 
     /**
@@ -149,7 +149,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetServername()
     {
-        $this->assertNull($this->connection->getServername());
+        $this->assertSame('*', $this->connection->getServername());
     }
 
     /**
