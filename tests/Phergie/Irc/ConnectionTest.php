@@ -34,6 +34,41 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Tests configuration via the constructor.
+     */
+    public function testConstructor()
+    {
+        $serverHostname = 'serverHostname';
+        $serverPort = 6668;
+        $password = 'password';
+        $nickname = 'nickname';
+        $username = 'username';
+        $servername = 'servername';
+        $realname = 'realname';
+        $options = array('foo' => 'bar');
+
+        $connection = new Connection(array(
+            'serverHostname' => $serverHostname,
+            'serverPort' => $serverPort,
+            'password' => $password,
+            'nickname' => $nickname,
+            'username' => $username,
+            'servername' => $servername,
+            'realname' => $realname,
+            'options' => $options,
+        ));
+
+        $this->assertSame($serverHostname, $connection->getServerHostname());
+        $this->assertSame($serverPort, $connection->getServerPort());
+        $this->assertSame($password, $connection->getPassword());
+        $this->assertSame($nickname, $connection->getNickname());
+        $this->assertSame($username, $connection->getUsername());
+        $this->assertSame($servername, $connection->getServername());
+        $this->assertSame($realname, $connection->getRealname());
+        $this->assertSame($options['foo'], $connection->getOption('foo'));
+    }
+
+    /**
      * Tests setServerHostname().
      */
     public function testSetServerHostname()

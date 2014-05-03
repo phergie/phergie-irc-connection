@@ -82,6 +82,26 @@ class Connection implements ConnectionInterface
     protected $options = array();
 
     /**
+     * Constructor to accept property values.
+     *
+     * @param array $config Associative array keyed by property name
+     */
+    public function __construct(array $config = array())
+    {
+        foreach ($config as $key => $value) {
+            $method = 'set' . $key;
+            if (method_exists($this, $method)) {
+                $this->$method($value);
+            }
+        }
+        if (isset($config['options']) && is_array($config['options'])) {
+            foreach ($config['options'] as $key => $value) {
+                $this->setOption($key, $value);
+            }
+        }
+    }
+
+    /**
      * Implements ConnectionInterface::setServerHostname().
      *
      * @param string $hostname
