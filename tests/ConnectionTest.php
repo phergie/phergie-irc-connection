@@ -8,7 +8,9 @@
  * @package Phergie\Irc
  */
 
-namespace Phergie\Irc;
+namespace Phergie\Irc\Tests;
+
+use Phergie\Irc\Connection;
 
 /**
  * Tests for \Phergie\Irc\Connection.
