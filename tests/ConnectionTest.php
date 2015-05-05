@@ -229,4 +229,17 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($this->connection->getOption('foo'));
         $this->assertNull($this->connection->getOption('bar'));
     }
+
+    public function testFluentInterface()
+    {
+        $this->assertSame($this->connection, $this->connection->setServerHostname('hostname'));
+        $this->assertSame($this->connection, $this->connection->setServerPort(6668));
+        $this->assertSame($this->connection, $this->connection->setPassword('password'));
+        $this->assertSame($this->connection, $this->connection->setNickname('nickname'));
+        $this->assertSame($this->connection, $this->connection->setUsername('username'));
+        $this->assertSame($this->connection, $this->connection->setHostname('hostname'));
+        $this->assertSame($this->connection, $this->connection->setServername('servername'));
+        $this->assertSame($this->connection, $this->connection->setRealname('realname'));
+        $this->assertSame($this->connection, $this->connection->setOption('foo', 'bar'));
+    }
 }
