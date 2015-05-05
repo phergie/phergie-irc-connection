@@ -105,11 +105,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setServerHostname().
      *
      * @param string $hostname
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setServerHostname()
      */
     public function setServerHostname($hostname)
     {
         $this->serverHostname = $hostname;
+
+        return $this;
     }
 
     /**
@@ -127,11 +130,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setServerPort().
      *
      * @param int $port
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setServerPort()
      */
     public function setServerPort($port)
     {
         $this->serverPort = $port;
+
+        return $this;
     }
 
     /**
@@ -149,11 +155,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setPassword().
      *
      * @param string $password
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setPassword()
      */
     public function setPassword($password)
     {
         $this->password = $password;
+
+        return $this;
     }
 
     /**
@@ -171,11 +180,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setNickname().
      *
      * @param string $nickname
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setNickname()
      */
     public function setNickname($nickname)
     {
         $this->nickname = $nickname;
+
+        return $this;
     }
 
     /**
@@ -193,11 +205,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setUsername().
      *
      * @param string $username
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setUsername()
      */
     public function setUsername($username)
     {
         $this->username = $username;
+
+        return $this;
     }
 
     /**
@@ -215,11 +230,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setHostname().
      *
      * @param string $hostname
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setHostname()
      */
     public function setHostname($hostname)
     {
         $this->hostname = $hostname;
+
+        return $this;
     }
 
     /**
@@ -237,11 +255,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setServername().
      *
      * @param string $servername
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setServername()
      */
     public function setServername($servername)
     {
         $this->servername = $servername;
+
+        return $this;
     }
 
     /**
@@ -259,11 +280,14 @@ class Connection implements ConnectionInterface
      * Implements ConnectionInterface::setRealname().
      *
      * @param string $realname
+     * @return $this
      * @see \Phergie\Irc\ConnectionInterface::setRealname()
      */
     public function setRealname($realname)
     {
         $this->realname = $realname;
+
+        return $this;
     }
 
     /**
@@ -282,10 +306,13 @@ class Connection implements ConnectionInterface
      *
      * @param string $name Option name
      * @param mixed $value Option value
+     * @return $this
      */
     public function setOption($name, $value)
     {
         $this->options[$name] = $value;
+
+        return $this;
     }
 
     /**

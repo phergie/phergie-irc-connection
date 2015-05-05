@@ -29,15 +29,16 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```php
 $connection = new \Phergie\Irc\Connection();
 
-$connection->setServerHostname('hostname');
-$connection->setServerPort(6668);
-$connection->setPassword('password');
-$connection->setNickname('nickname');
-$connection->setUsername('username');
-$connection->setHostname('hostname');
-$connection->setServername('servername');
-$connection->setRealname('realname');
-$connection->setOption('option', 'value');
+$connection
+    ->setServerHostname('hostname')
+    ->setServerPort(6668)
+    ->setPassword('password')
+    ->setNickname('nickname')
+    ->setUsername('username')
+    ->setHostname('hostname')
+    ->setServername('servername')
+    ->setRealname('realname')
+    ->setOption('option', 'value');
 
 echo $connection->getServerHostname();
 echo $connection->getServerPort();
