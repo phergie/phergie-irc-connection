@@ -222,6 +222,18 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Tests getMask().
+     */
+    public function testGetMask()
+    {
+        $this->connection->setNickname('MyNick');
+        $this->connection->setUsername('MyIdent');
+        $this->connection->setServerHostname('server.int');
+
+        $this->assertSame('MyNick!MyIdent@server.int', $this->connection->getMask());
+    }
+
+    /**
      * Tests getOption().
      */
     public function testGetOption()

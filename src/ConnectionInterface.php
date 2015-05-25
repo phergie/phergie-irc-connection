@@ -162,4 +162,11 @@ interface ConnectionInterface
      * @return mixed
      */
     public function getOption($name);
+
+    /**
+     * Returns a formatted connection "mask".
+     *
+     * @return string
+     */
+    public function getMask();
 }
