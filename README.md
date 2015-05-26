@@ -21,7 +21,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 
 ## Design goals
 
-* Minimal dependencies: PHP 5.3.3+
+* Minimal dependencies: PHP 5.4.2+
 * Simple easy-to-understand API
 
 ## Usage
