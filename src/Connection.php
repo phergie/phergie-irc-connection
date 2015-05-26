@@ -365,4 +365,26 @@ class Connection implements ConnectionInterface
     {
         $this->data = array();
     }
+
+    /**
+     * Returns a formatted connection "mask", in the format
+     * nick!user@server
+     *
+     * This is not guaranteed to be constant for a given connection, or even
+     * unique to a single connection, and as such should NOT be used as a key
+     * to store connection-specific data. (Use the built-in SplObjectStorage
+     * class for this purpose.) However, it is useful for logging and other
+     * output functions.
+     *
+     * @return string
+     */
+    public function getMask()
+    {
+        return sprintf(
+            '%s!%s@%s',
+            $this->nickname,
+            $this->username,
+            $this->serverHostname
+        );
+    }
 }

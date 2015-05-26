@@ -183,4 +183,11 @@ interface ConnectionInterface
      * Clears all runtime connection data.
      */
     public function clearData();
+
+    /**
+     * Returns a formatted connection "mask".
+     *
+     * @return string
+     */
+    public function getMask();
 }
