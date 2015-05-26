@@ -12,9 +12,8 @@ The recommended method of installation is [through composer](http://getcomposer.
 
 ```JSON
 {
-    "minimum-stability": "dev",
     "require": {
-        "phergie/phergie-irc-connection": "1.1.0"
+        "phergie/phergie-irc-connection": "~2"
     }
 }
 ```
