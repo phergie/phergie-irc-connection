@@ -162,4 +162,25 @@ interface ConnectionInterface
      * @return mixed
      */
     public function getOption($name);
+
+    /**
+     * Sets a runtime connection data field.
+     *
+     * @param string $name Data key
+     * @param mixed $value Data value
+     */
+    public function setData($name, $value);
+
+    /**
+     * Returns a runtime connection data field.
+     *
+     * @param string $name Data key
+     * @return mixed
+     */
+    public function getData($name);
+
+    /**
+     * Clears all runtime connection data.
+     */
+    public function clearData();
 }

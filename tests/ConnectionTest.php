@@ -230,6 +230,28 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($this->connection->getOption('bar'));
     }
 
+    /**
+     * Tests setData(), getData() and clearData().
+     */
+    public function testDataFunctions()
+    {
+        $this->assertNull($this->connection->getOption('foo'));
+        $this->assertNull($this->connection->getOption('bar'));
+
+        $this->connection->setData('foo', 'bar');
+        $this->assertSame('bar', $this->connection->getData('foo'));
+
+        $this->connection->setData('foo', 'baz');
+        $this->assertSame('baz', $this->connection->getData('foo'));
+
+        $this->connection->setData('bar', 'quux');
+        $this->assertSame('quux', $this->connection->getData('bar'));
+
+        $this->connection->clearData();
+        $this->assertNull($this->connection->getData('foo'));
+        $this->assertNull($this->connection->getData('bar'));
+    }
+
     public function testFluentInterface()
     {
         $this->assertSame($this->connection, $this->connection->setServerHostname('hostname'));
@@ -241,5 +263,6 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($this->connection, $this->connection->setServername('servername'));
         $this->assertSame($this->connection, $this->connection->setRealname('realname'));
         $this->assertSame($this->connection, $this->connection->setOption('foo', 'bar'));
+        $this->assertSame($this->connection, $this->connection->setData('foo', 'bar'));
     }
 }
