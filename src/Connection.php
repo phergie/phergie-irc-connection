@@ -82,6 +82,13 @@ class Connection implements ConnectionInterface
     protected $options = array();
 
     /**
+     * Runtime connection data.
+     *
+     * @var array
+     */
+    protected $data = array();
+
+    /**
      * Constructor to accept property values.
      *
      * @param array $config Associative array keyed by property name
@@ -324,6 +331,39 @@ class Connection implements ConnectionInterface
     public function getOption($name)
     {
         return isset($this->options[$name]) ? $this->options[$name] : null;
+    }
+
+    /**
+     * Implements ConnectionInterface::setData().
+     *
+     * @param string $name Data key
+     * @param mixed $value Data value
+     * @return $this
+     */
+    public function setData($name, $value)
+    {
+        $this->data[$name] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Implements ConnectionInterface::getData().
+     *
+     * @param string $name Data key
+     * @return mixed
+     */
+    public function getData($name)
+    {
+        return isset($this->data[$name]) ? $this->data[$name] : null;
+    }
+
+    /**
+     * Implements ConnectionInterface::clearData().
+     */
+    public function clearData()
+    {
+        $this->data = array();
     }
 
     /**
